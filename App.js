@@ -76,7 +76,7 @@ export default function App() {
           headers: headers, 
           body: JSON.stringify({taskHash: taskHash,}) // сюда кладем название комнаты
       }) 
-      const steps = await get_steps.json() // получаем json со массивом всех uuid заданий
+      const steps = await get_steps.json() // получаем json с массивом всех uuid заданий
       if (Object.values(steps.meta.stepUuids).length != 0){
          Toast.show({ // успешное уведомление, если задания есть
           type: 'success',
