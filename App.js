@@ -103,8 +103,8 @@ export default function App() {
     }
   }
 
-  if (custom_fonts[0]) { // ну тут фронт короче
-    return (
+  if (custom_fonts[0]) { //ждем пока подгрузятся шрифты
+    return ( // ну тут фронт короче
     <View style={styles.container}>
       <View style={styles.header_group}>
         <View style={styles.header_intro}>
