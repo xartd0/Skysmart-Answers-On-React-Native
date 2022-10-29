@@ -144,8 +144,8 @@ export default function App() {
       <View style={styles.answers_grid}>
           <ScrollView>
             {data.map((item) =>
-              <FadeInView>
-                <View style={styles.answer_cont} key={item['task_num']}>
+              <FadeInView key={item['task_num']}>
+                <View style={styles.answer_cont}>
                   <Text style={styles.text_answers_task}>{item['task_num']}</Text>
                   <Text style={styles.answer_text}>{item['answers']}</Text>
                 </View>
