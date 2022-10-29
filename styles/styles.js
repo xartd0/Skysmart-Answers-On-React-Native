@@ -71,10 +71,9 @@ export default StyleSheet.create({
     loremIpsum2: {
       fontFamily: "roboto-regular",
       color: "rgba(164,164,164,1)",
-      height: 20,
-      width: 263,
-      marginTop: 9,
-      marginLeft: 12
+      width: 280,
+      height: 39,
+      padding: 10,
     },
     group: {
       width: 39,
@@ -104,12 +103,20 @@ export default StyleSheet.create({
       width: 325,
       backgroundColor: "rgba(244,245,246,1)",
       borderRadius: 9,
-      marginTop: 10,
+      borderWidth: 1,
+      borderColor: '#e9eced',
+      marginTop: 2,
       marginLeft: 15,
     },
     answer_text: {
+      marginTop: 4,
+      marginLeft: 25
+    },
+    text_answers_task :{
+      fontSize: 15,
+      fontWeight: "bold",
       marginTop: 15,
-      marginLeft: 15
+      marginLeft: 15,
     },
     answers_grid:{
       flex: 1,
