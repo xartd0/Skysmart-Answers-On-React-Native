@@ -2,25 +2,24 @@ import { StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-      flex: 1
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center', 
     },
-    header: {
+    header_group: {
       width: 326,
       height: 107,
-      marginTop: 45,
-      marginLeft: 24
+      marginTop: 50,
     },
-    rect: {
+    header_intro: {
       width: 326,
       height: 99,
       position: "absolute",
       backgroundColor: "rgba(228,251,255,1)",
       borderRadius: 9,
-      left: 0,
-      top: 0,
       flexDirection: "row"
     },
-    ответыНаSkysmart: {
+    header_main_text: {
       fontFamily: "roboto-700",
       color: "rgba(20,155,206,1)",
       height: 58,
@@ -28,19 +27,19 @@ export default StyleSheet.create({
       fontSize: 23,
       marginTop: 9
     },
-    image: {
+    image_header: {
       width: 70,
       height: 85,
       marginLeft: 12
     },
-    ответыНаSkysmartRow: {
+    header_text_group: {
       height: 85,
       flexDirection: "row",
       flex: 1,
       marginRight: 17,
       marginLeft: 15
     },
-    loremIpsum: {
+    header_text_mini: {
       top: 66,
       left: 15,
       position: "absolute",
@@ -50,25 +49,19 @@ export default StyleSheet.create({
       width: 212,
       opacity: 0.45
     },
-    rectStack: {
-      width: 326,
-      height: 105,
-      marginTop: 4
-    },
     link_input: {
-      width: 275,
+      width: 327,
       height: 39,
       flexDirection: "row",
       marginTop: 7,
-      marginLeft: 25
     },
-    rect2: {
+    link_input_cont: {
       width: 280,
       height: 39,
       backgroundColor: "rgba(244,245,246,1)",
       borderRadius: 9
     },
-    loremIpsum2: {
+    link_input_text: {
       fontFamily: "roboto-regular",
       color: "rgba(164,164,164,1)",
       width: 280,
@@ -86,27 +79,26 @@ export default StyleSheet.create({
       backgroundColor: "rgba(250,216,0,1)",
       borderRadius: 9
     },
-    image2: {
+    answer_button_image: {
       width: 16,
       height: 15,
       marginTop: 12,
       marginLeft: 13
     },
-    rect2Row: {
+    link_input_group: {
       height: 39,
       flexDirection: "row",
       flex: 1,
       marginRight: -50
     },
-    rect3: {
+    answer_cont: {
+      width: 326,
       height: 100,
-      width: 325,
       backgroundColor: "rgba(244,245,246,1)",
       borderRadius: 9,
-      borderWidth: 1,
+      borderWidth: 0.5,
       borderColor: '#e9eced',
-      marginTop: 2,
-      marginLeft: 15,
+      marginTop: 16,
     },
     answer_text: {
       marginTop: 4,
