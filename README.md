@@ -2,4 +2,4 @@
 ### (первый раз писал на react native, сделал чисто по приколу, поддерживает пока только один тип заданий, позже добавлю больше)
 
 
-# skysmart-answers-on-react-native![video_2022-10-30_01-41-16](https://user-images.githubusercontent.com/43171120/198855147-e30f903a-597c-4b7f-943a-730d01c5a602.gif)
+![video_2022-10-30_13-18-54](https://user-images.githubusercontent.com/43171120/198873611-1d1bfb17-61f4-41c9-9da6-0a06c1e69ed4.gif)
