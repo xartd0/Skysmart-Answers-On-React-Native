@@ -27,7 +27,8 @@ const FadeInView = (props) => {
       fadeAnim,
       {
         toValue: 1,
-        duration: 4000,
+        duration: 3000,
+        useNativeDriver: true,
       }
     ).start();
   }, [fadeAnim])
@@ -57,6 +58,16 @@ export default function App() {
   const [taskHash,setText] = useState(''); // стэйт для названия комнаты
   const fadeAnim = useRef(new Animated.Value(0)).current  // подгрузка анимации
 
+  const removeElement = (num) => { // удаление ответа
+    data.forEach(element => { // цикл по все овтетам
+      if (element['task_num'] == num){
+        data.splice(data.indexOf(element), 1) // удаляем из массива
+        console.log(data.indexOf(element))
+      }
+    });
+    setText(num + ' удалено!') // обновляем стейт, чтобы элементы обновились
+  };
+
   const Get_answers = async(taskHash) =>{
     if (taskHash == undefined){ // проверка, ввел ли что-нибуль пользователь
       Toast.show({ // уведомление с ошибкой
@@ -76,7 +87,7 @@ export default function App() {
           headers: headers, 
           body: JSON.stringify({taskHash: taskHash,}) // сюда кладем название комнаты
       }) 
-      const steps = await get_steps.json() // получаем json с массивом всех uuid заданий
+      const steps = await get_steps.json() // получаем json со массивом всех uuid заданий
       if (Object.values(steps.meta.stepUuids).length != 0){
          Toast.show({ // успешное уведомление, если задания есть
           type: 'success',
@@ -103,8 +114,8 @@ export default function App() {
     }
   }
 
-  if (custom_fonts[0]) { //ждем пока подгрузятся шрифты
-    return ( // ну тут фронт короче
+  if (custom_fonts[0]) { // ну тут фронт короче
+    return (
     <View style={styles.container}>
       <View style={styles.header_group}>
         <View style={styles.header_intro}>
@@ -148,6 +159,13 @@ export default function App() {
                 <View style={styles.answer_cont}>
                   <Text style={styles.text_answers_task}>{item['task_num']}</Text>
                   <Text style={styles.answer_text}>{item['answers']}</Text>
+                  <TouchableOpacity onPress={() => removeElement(item['task_num'])}>
+                    <Image
+                      source={require("./assets/images/trash-10-128.png")}
+                      resizeMode="contain"
+                      style={styles.button_delete_answer_image}
+                    ></Image>
+                  </TouchableOpacity>
                 </View>
               </FadeInView>
             )}
