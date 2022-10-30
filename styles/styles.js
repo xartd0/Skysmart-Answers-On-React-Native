@@ -112,5 +112,12 @@ export default StyleSheet.create({
     },
     answers_grid:{
       flex: 1,
+    },
+    button_delete_answer_image:{
+      alignSelf: 'flex-end',
+      marginTop: 15,
+      marginRight: 5,
+      width: 15,
+      height: 15
     }
   });
