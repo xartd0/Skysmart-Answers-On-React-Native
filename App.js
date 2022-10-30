@@ -62,10 +62,9 @@ export default function App() {
     data.forEach(element => { // цикл по все овтетам
       if (element['task_num'] == num){
         data.splice(data.indexOf(element), 1) // удаляем из массива
-        console.log(data.indexOf(element))
       }
     });
-    setText(num + ' удалено!') // обновляем стейт, чтобы элементы обновились
+    setText(num.split('\n')[0] + ' удалено!') // обновляем стейт, чтобы элементы обновились
   };
 
   const Get_answers = async(taskHash) =>{
@@ -163,8 +162,8 @@ export default function App() {
                     <Image
                       source={require("./assets/images/trash-10-128.png")}
                       resizeMode="contain"
-                      style={styles.button_delete_answer_image}
-                    ></Image>
+                      style={styles.button_delete_answer_image}>
+                    </Image>
                   </TouchableOpacity>
                 </View>
               </FadeInView>

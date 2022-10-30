@@ -93,7 +93,6 @@ export default StyleSheet.create({
     },
     answer_cont: {
       width: 326,
-      height: 100,
       backgroundColor: "rgba(244,245,246,1)",
       borderRadius: 9,
       borderWidth: 0.5,
@@ -115,8 +114,8 @@ export default StyleSheet.create({
     },
     button_delete_answer_image:{
       alignSelf: 'flex-end',
-      marginTop: 15,
       marginRight: 5,
+      marginBottom: 10,
       width: 15,
       height: 15
     }
