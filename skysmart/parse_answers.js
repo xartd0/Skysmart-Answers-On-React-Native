@@ -17,7 +17,7 @@ export default function parse_answers(html, numtask){
     }
     if (html.includes('vim-input-answers')){
         let temp_list = Array.from(parsed.querySelectorAll("vim-input-item")).map(x => x.innerText.toLowerCase())
-        answer_text += [...new Set(temp_list)];
+        answer_text += [...new Set(temp_list)]; //берем только уникальные элементы, т.к skysmart выдает сразу несколько вариантов одного ответа
     }
  
     let temp_ret = {
