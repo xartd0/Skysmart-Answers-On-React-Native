@@ -23,7 +23,7 @@ export default function parse_answers(html, numtask){
     let temp_ret = {
         'task_num' : 'Задание #' + numtask + '\n' + task_description,
         'answers': answer_text, 
-    } // пока только один тип задания (математика) чисто для тестов
+    } // пока мало типов заданий, буду добавлять потихноьку
 
     return temp_ret // возвращаем словарь с номером и ответами задания
 }
