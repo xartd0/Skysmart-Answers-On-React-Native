@@ -2,10 +2,10 @@ import { parse } from 'node-html-parser';
 
 export default function parse_answers(html, numtask){
     
-    let parsed = parse(html);
+    let parsed = parse(html); // получаем объект для парсинга
     let task_description = ''
     let answer_text = ''
-    // получаем объект для парсинга
+    
     if (html.includes('vim-instruction')){
         task_description = parsed.querySelector('vim-instruction').innerText
     }
