@@ -67,6 +67,14 @@ export default function App() {
     setText(num.split('\n')[0] + ' удалено!') // обновляем стейт, чтобы элементы обновились
   };
 
+  const format_link = (link) => {
+    if (link.includes('start')){
+      return link.split('task/')[1].split('/')[0]
+    }else{
+      return link.split('student/')[1]
+    }
+  }
+
   const Get_answers = async(taskHash) =>{
     if (taskHash == undefined){ // проверка, ввел ли что-нибуль пользователь
       Toast.show({ // уведомление с ошибкой
@@ -137,7 +145,7 @@ export default function App() {
             <TextInput style={styles.link_input_text} 
                   placeholder =  "Введите ссылку на тест" 
                   placeholderTextColor = "#A4A4A4"
-                  onChangeText={(taskHash) => setText(taskHash.split('student/')[1])}
+                  onChangeText={(taskHash) => setText(format_link(taskHash))}
                   value={taskHash}/>
           </View>
           <View style={styles.group}>
@@ -174,5 +182,4 @@ export default function App() {
     </View>
     );
   }
-  
 }
